@@ -24,6 +24,12 @@ module.exports = {
       "type": "string",
       "message": "Author"
     },
+    "port": {
+      "type": "string",
+      "required": true,
+      "message": "Default port for webpack",
+      "default": "9001"
+    },
     "build": {
       "type": "list",
       "message": "Vue build",
