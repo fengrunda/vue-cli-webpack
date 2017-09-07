@@ -7,9 +7,6 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="email=no" />
-    {{#if !rem}}
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    {{/if}}
     {{#if rem}}
     <meta name="flexible" content="initial-dpr=1" />
     <script>
@@ -18,6 +15,8 @@
       //短屏判断
       function fixHeight() { document.getElementsByTagName("html")[0].className = (document.documentElement.clientWidth / document.documentElement.clientHeight >= 0.68) ? "fixHeight" : ""; }
     </script>
+    {{else}}
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     {{/if}}
     <title>{{ name }}</title>
   </head>
