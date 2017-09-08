@@ -35,20 +35,20 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
-.bgImg(@imgUrl,@scale:1){
-    @url:"@{imgUrl}?scale=@{scale}";
-    @imgW:unit(image-width(@imgUrl),px) * @scale;
-    @imgH:unit(image-height(@imgUrl),px) * @scale;
-    background-image: url(@url);
+{{#less}}
+.bgImg(\@imgUrl,\@scale:1)\{
+    \@url:"@{imgUrl}?scale=@{scale}";
+    \@imgW:unit(image-width(\@imgUrl),px) * \@scale;
+    \@imgH:unit(image-height(\@imgUrl),px) * \@scale;
+    background-image: url(\@url);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: @imgW;
-    height: @imgH;
+    width: \@imgW;
+    height: \@imgH;
     display: inline-block;
 }
-.logo {
+.logo \{
   .bgImg('../images/sprites/logo.png');
 }
-
+{{/less}}
 </style>
