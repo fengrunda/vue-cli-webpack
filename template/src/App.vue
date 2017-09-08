@@ -35,7 +35,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-{{#less}}
+
 .bgImg(@imgUrl,@scale:1){
     @url:"@{imgUrl}?scale=@{scale}";
     @imgW:unit(image-width(@imgUrl),px) * @scale;
@@ -50,5 +50,5 @@ export default {
 .logo {
   .bgImg('../images/sprites/logo.png');
 }
-{{/less}}
+
 </style>
