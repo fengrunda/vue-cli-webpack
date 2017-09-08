@@ -4,7 +4,7 @@
     <div class="logo"></div>
     {{else}}
     <img src="./assets/logo.png">
-    {{less}}
+    {{/less}}
     {{#router}}
     <router-view></router-view>
     {{else}}
@@ -36,19 +36,19 @@ export default {
   margin-top: 60px;
 }
 {{#less}}
-.bgImg\(\@imgUrl,\@scale:1\)\{
-    \@url:"@{imgUrl}?scale=@{scale}";
-    \@imgW:unit\(image-width\(\@imgUrl\),px\) \* \@scale;
-    \@imgH:unit\(image-height\(\@imgUrl\),px\) \* \@scale;
-    background-image: url\(\@url\);
+.bgImg(@imgUrl,@scale:1){
+    @url:"@{imgUrl}?scale=@{scale}";
+    @imgW:unit(image-width(@imgUrl),px) * @scale;
+    @imgH:unit(image-height(@imgUrl),px) * @scale;
+    background-image: url(@url);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: \@imgW;
-    height: \@imgH;
+    width: @imgW;
+    height: @imgH;
     display: inline-block;
-\}
-.logo \{
-  .bgImg\('../images/sprites/logo.png'\);
-\}
+}
+.logo {
+  .bgImg('../images/sprites/logo.png');
+}
 {{/less}}
 </style>
