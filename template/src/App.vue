@@ -26,7 +26,8 @@ export default {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<style{{#less}} lang="less"{{/less}}>
+{{#less}}
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,8 +36,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-{{#if less}}
-.bgImg(@imgUrl,@scale:1)\{
+.bgImg(@imgUrl,@scale:1){
     @url:"@{imgUrl}?scale=@{scale}";
     @imgW:unit(image-width(@imgUrl),px) * @scale;
     @imgH:unit(image-height(@imgUrl),px) * @scale;
@@ -46,9 +46,20 @@ export default {
     width: @imgW;
     height: @imgH;
     display: inline-block;
-\}
-.logo \{
+}
+.logo {
   .bgImg('../images/sprites/logo.png');
-\}
-{{/if}}
+}
 </style>
+{{else}}
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+{{/less}}
