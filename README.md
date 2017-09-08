@@ -1,6 +1,6 @@
 # fengrunda's vue-webpack-boilerplate
 
-> A modified vue-cli template with additional some options, forked from the official [vue-webpack-boilerplate](https://github.com/vuejs-templates/webpack).
+> A modified vue-cli template with additional some options, forked from the official [vue-webpack-boilerplate](https://github.com/vuejs-templates/webpack) and [Alex's vue-webpack-boilerplate](https://github.com/aleksejevski/vue-cli-webpack).
 
 ## Documentation
 
