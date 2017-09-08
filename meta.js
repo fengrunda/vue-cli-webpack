@@ -62,7 +62,7 @@ module.exports = {
       "type":   "confirm",
       "message":"Use rem solution for your style sheet?"
     },
-    "spriteImage": {
+    "sprite": {
       "type":   "confirm",
       "message":"Use spriteImage solution for your style sheet?"
     },

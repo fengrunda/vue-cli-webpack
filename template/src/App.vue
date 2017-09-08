@@ -1,6 +1,10 @@
 <template>
   <div id="app">
+    {{#less}}
+    <div class="logo"></div>
+    {{else}}
     <img src="./assets/logo.png">
+    {{less}}
     {{#router}}
     <router-view></router-view>
     {{else}}
@@ -22,7 +26,7 @@ export default {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<style>
+<style{{#less}} lang="less"{{/less}}>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,4 +35,20 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+{{#less}}
+.bgImg(@imgUrl,@scale:1){
+    @url:"@{imgUrl}?scale=@{scale}";
+    @imgW:unit(image-width(@imgUrl),px) * @scale;
+    @imgH:unit(image-height(@imgUrl),px) * @scale;
+    background-image: url(@url);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: @imgW;
+    height: @imgH;
+    display: inline-block;
+}
+.logo {
+  .bgImg('../images/sprites/logo.png');
+}
+{{/less}}
 </style>
