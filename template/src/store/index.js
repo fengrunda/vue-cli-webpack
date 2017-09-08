@@ -7,12 +7,12 @@ const state = {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 const actions = {
     /**
-     * 设置关于app sdk的数据
+     * 设置用户信息
      * @param {*} param0 
-     * @param {*Object} obj 需要存放在store.state.sdk里面的任意对象 
+     * @param {*Object} obj 需要存放在store.state.userInfo里面的任意对象 
      */
-    setSdkData({ commit, dispatch, state }, obj) {
-        commit(types.SET_SDK_DATA, obj)
+    setUserInfo({ commit, dispatch, state }, obj) {
+        commit(types.SET_USER_INFO, obj);
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 const getters = {}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
