@@ -36,7 +36,7 @@ export default {
   margin-top: 60px;
 }
 {{#if less}}
-.bgImg(@imgUrl,@scale:1){
+.bgImg(@imgUrl,@scale:1)\{
     @url:"@{imgUrl}?scale=@{scale}";
     @imgW:unit(image-width(@imgUrl),px) * @scale;
     @imgH:unit(image-height(@imgUrl),px) * @scale;
@@ -46,9 +46,9 @@ export default {
     width: @imgW;
     height: @imgH;
     display: inline-block;
-}
-.logo {
+\}
+.logo \{
   .bgImg('../images/sprites/logo.png');
-}
+\}
 {{/if}}
 </style>
